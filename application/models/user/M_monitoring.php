@@ -7,7 +7,6 @@
             $this->db->from('tb_riwayat');
             $this->db->order_by('id_riwayat', 'desc');
             $query = $this->db->get();
-            // $query = $this->db->query("SELECT suhu FROM riwayat ORDER BY id_riwayat DESC");
             return $query->row();
         }
 
@@ -17,7 +16,6 @@
             $this->db->from('tb_riwayat');
             $this->db->order_by('id_riwayat', 'asc');
             $query = $this->db->get();
-            // $query = $this->db->query("SELECT suhu FROM riwayat ORDER BY id_riwayat DESC");
             return $query;
         }
 

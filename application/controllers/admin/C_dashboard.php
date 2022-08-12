@@ -7,11 +7,10 @@ class C_dashboard extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();	
-
+		$this->load->model('user/M_monitoring');
 		if(!isset($_SESSION['auth'])){
 			error_reporting(0);
 			redirect('admin/C_auth');
-			$this->load->model('user/M_monitoring');
 		}
 	}
 

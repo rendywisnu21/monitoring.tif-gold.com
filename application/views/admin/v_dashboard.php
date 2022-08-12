@@ -12,7 +12,7 @@
                         $("#bacakelembaban").load("<?php echo site_url('admin/C_dashboard/bacakelembaban'); ?>");
                     }, 5000); 
                 });
-				
+						
             </script>
             
 		<!-- Content Wrapper. Contains page content -->
