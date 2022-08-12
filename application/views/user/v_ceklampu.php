@@ -1,8 +1,7 @@
 <?php
-    //cetak isi field suhu
-    if ($data_sensor != "-") {
-        echo '<p class="text-black">'.$data_sensor->lampu.'</p>';
+    if ($data_sensor->lampu == '0') {
+        echo '<span class="info-box-number">Mati</span>';
     } else {
-        echo '<p class="text-secondary text-center">-</p>';
+        echo '<span class="info-box-number">Hidup</span>';
     }
 ?>
