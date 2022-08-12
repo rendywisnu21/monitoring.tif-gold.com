@@ -188,22 +188,19 @@ class C_beranda extends CI_Controller
 
     public function kirimdata()
     {
-        //baca nilai suhu, kelembaban, ph di segment 5,6,7
         $suhu = $_GET['suhu'];
         $kelembaban = $_GET['kelembaban'];
-        $ph = $_GET['ph'];   
-        $fuzzyset = $_GET['fuzzy_set'];
-        $hasil = $_GET['hasil'];
-        $grade = $_GET['grade'];
+        $kipas = $_GET['kipas'];   
+        $lampu = $_GET['lampu'];
+        $pelembab = $_GET['pelembab'];
 
         //update ke tabel tb_riwayat
         $DataUpdate = array(
             'suhu' => $suhu,
             'kelembaban' => $kelembaban,
-            'ph' => $ph,
-            'fuzzy_set' => $fuzzyset,
-            'hasil' => $hasil,
-            'grade' => $grade,
+            'kipas' => $kipas,
+            'lampu' => $lampu,
+            'pelembab' => $pelembab
         );
 
         //update data
