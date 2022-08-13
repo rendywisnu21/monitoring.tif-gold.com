@@ -106,11 +106,7 @@ class C_beranda extends CI_Controller
         }
 
         //Kirim ke tampilan ceksuhu
-        // $this->load->view('user/v_header', $data);
-        // $this->load->view('user/v_navbar');
-        // $this->load->view('user/v_sidebar');
         $this->load->view('user/v_ceksuhu', $data);
-        // $this->load->view('user/v_footer');
     }
 
     public function cekkelembaban()
@@ -123,12 +119,8 @@ class C_beranda extends CI_Controller
             $data = array('data_sensor' => $recordSensor);
         }
 
-        //Kirim ke tampilan ceksuhu
-        // $this->load->view('user/v_header', $data);
-        // $this->load->view('user/v_navbar');
-        // $this->load->view('user/v_sidebar');
+        //Kirim ke tampilan cekkelembaban
         $this->load->view('user/v_cekkelembaban', $data);
-        // $this->load->view('user/v_footer');
     }
 
     public function cekkipas()
@@ -141,13 +133,8 @@ class C_beranda extends CI_Controller
             $data = array('data_sensor' => $recordSensor);
         }
 
-
-        //Kirim ke tampilan ceksuhu
-        // $this->load->view('user/v_header', $data);
-        // $this->load->view('user/v_navbar');
-        // $this->load->view('user/v_sidebar');
+        //Kirim ke tampilan cekkipas
         $this->load->view('user/v_cekkipas', $data);
-        // $this->load->view('user/v_footer');
     }
 
     public function ceklampu()
@@ -160,11 +147,7 @@ class C_beranda extends CI_Controller
             $data = array('data_sensor' => $recordSensor);
         }
 
-
-        //Kirim ke tampilan ceksuhu
-        // $this->load->view('user/v_header', $data);
-        // $this->load->view('user/v_navbar');
-        // $this->load->view('user/v_sidebar');
+        //Kirim ke tampilan ceklampu
         $this->load->view('user/v_ceklampu', $data);
     }
 
@@ -178,11 +161,7 @@ class C_beranda extends CI_Controller
             $data = array('data_sensor' => $recordSensor);
         }
 
-
-        //Kirim ke tampilan ceksuhu
-        // $this->load->view('user/v_header', $data);
-        // $this->load->view('user/v_navbar');
-        // $this->load->view('user/v_sidebar');
+        //Kirim ke tampilan cekpelembab
         $this->load->view('user/v_cekpelembab', $data);
     }
 
