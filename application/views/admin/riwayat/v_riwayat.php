@@ -20,11 +20,6 @@
         			<div class="row mb-2">
         				<div class="col-sm-6">
         					<h1 class="mt-2 mx-2 text-bold"><?= $title; ?></h1>
-        					<!-- Clock -->
-        					<iframe
-        						src="https://free.timeanddate.com/clock/i8gh359z/n554/tlid38/fs48/tcf4f6f9/pcf4f6f9/ftb/pa10"
-        						frameborder="0" width="212" height="75"></iframe>
-        					<!-- End of Clock -->
         				</div>
         			</div>
         		</div><!-- /.container-fluid -->
@@ -57,9 +52,9 @@
         							</thead>
         							<tbody>
         								<?php $no = 1;
-											foreach ($riwayat as $rw):
-											$id = $rw->id_riwayat
-										?>
+									foreach ($riwayat as $rw):
+										$id = $rw->id_riwayat
+								?>
         								<tr>
         									<td class="text-center"><?= $no; ?></td>
         									<td class="text-center" id="cek_suhu"><?= $rw->suhu; ?></td>
