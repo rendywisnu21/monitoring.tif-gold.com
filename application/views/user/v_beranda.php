@@ -31,6 +31,11 @@
         	<!-- Main content -->
         	<section class="content">
         		<div class="container-fluid">
+        			<!-- Clock -->
+        			<iframe
+        				src="https://free.timeanddate.com/clock/i8gh359z/n554/tlid38/fs48/tcf4f6f9/pcf4f6f9/ftb/pa10"
+        				frameborder="0" width="212" height="75"></iframe>
+        			<!-- End of Clock -->
         			<!-- Info boxes -->
         			<!-- Row 1 -->
         			<div class="row">

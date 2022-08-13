@@ -3,14 +3,12 @@
         	$(document).ready(function () {
         		setInterval(function () {
         			$("#cek_suhu").load("<?php echo site_url('admin/C_dashboard/ceksuhu'); ?>");
-        			$("#cek_kelembaban").load(
-        			"<?php echo site_url('admin/C_dashboard/cekkelembaban'); ?>");
+        			$("#cek_kelembaban").load("<?php echo site_url('admin/C_dashboard/cekkelembaban'); ?>");
         			$("#cek_kipas").load("<?php echo site_url('admin/C_dashboard/cekkipas'); ?>");
         			$("#cek_lampu").load("<?php echo site_url('admin/C_dashboard/ceklampu'); ?>");
         			$("#cek_pelembab").load("<?php echo site_url('admin/C_dashboard/cekpelembab'); ?>");
         			$("#bacasuhu").load("<?php echo site_url('admin/C_dashboard/bacasuhu'); ?>");
-        			$("#bacakelembaban").load(
-        				"<?php echo site_url('admin/C_dashboard/bacakelembaban'); ?>");
+        			$("#bacakelembaban").load("<?php echo site_url('admin/C_dashboard/bacakelembaban'); ?>");
         		}, 5000);
         	});
 
@@ -33,6 +31,11 @@
         	<!-- Main content -->
         	<section class="content">
         		<div class="container-fluid">
+        			<!-- Clock -->
+        			<iframe
+        				src="https://free.timeanddate.com/clock/i8gh359z/n554/tlid38/fs48/tcf4f6f9/pcf4f6f9/ftb/pa10"
+        				frameborder="0" width="212" height="75"></iframe>
+        			<!-- End of Clock -->
         			<!-- Info boxes -->
         			<!-- Row 1 -->
         			<div class="row">
