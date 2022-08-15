@@ -1,18 +1,3 @@
-        <script type="text/javascript" src="<?= base_url() ?>assets/dist/jquery/jquery.min.js"></script>
-        <script type="text/javascript">
-        	$(document).ready(function () {
-        		setInterval(function () {
-        			$("#cek_suhu").load("<?php echo site_url('user/C_beranda/ceksuhu'); ?>");
-        			$("#cek_kelembaban").load("<?php echo site_url('user/C_beranda/cekkelembaban'); ?>");
-        			$("#cek_kipas").load("<?php echo site_url('user/C_beranda/cekkipas'); ?>");
-        			$("#cek_lampu").load("<?php echo site_url('user/C_beranda/ceklampu'); ?>");
-        			$("#cek_pelembab").load("<?php echo site_url('user/C_beranda/cekpelembab'); ?>");
-        			$("#bacasuhu").load("<?php echo site_url('user/C_beranda/bacasuhu'); ?>");
-        			$("#bacakelembaban").load("<?php echo site_url('user/C_beranda/bacakelembaban'); ?>");
-        		}, 5000);
-        	});
-
-        </script>
         <div class="content-wrapper">
         	<!-- Content Header (Page header) -->
         	<section class="content-header mb-1 pb-1">
@@ -61,11 +46,11 @@
 											?>
         									<tr>
         										<td class="text-center"><?= $no; ?></td>
-        										<td class="text-center" id="cek_suhu"><?= $rw->suhu; ?></td>
-        										<td class="text-center" id="cek_kelembaban"><?= $rw->kelembaban; ?></td>
-        										<td class="text-center" id="cek_kipas"><?= $rw->kipas; ?></td>
-        										<td class="text-center" id="cek_lampu"><?= $rw->lampu; ?></td>
-        										<td class="text-center" id="cek_pelembab"><?= $rw->pelembab; ?></td>
+        										<td class="text-center"><?= $rw->suhu; ?></td>
+        										<td class="text-center"><?= $rw->kelembaban; ?></td>
+        										<td class="text-center"><?= $rw->kipas; ?></td>
+        										<td class="text-center"><?= $rw->lampu; ?></td>
+        										<td class="text-center"><?= $rw->pelembab; ?></td>
         										<td class="text-center"><?= $rw->tanggal; ?></td>
         									</tr>
         									<?php $no++; ?>

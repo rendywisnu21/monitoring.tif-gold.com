@@ -1,18 +1,3 @@
-        <script type="text/javascript" src="<?= base_url() ?>assets/dist/jquery/jquery.min.js"></script>
-        <script type="text/javascript">
-        	$(document).ready(function () {
-        		setInterval(function () {
-        			$("#cek_suhu").load("<?php echo site_url('user/C_beranda/ceksuhu'); ?>");
-        			$("#cek_kelembaban").load("<?php echo site_url('user/C_beranda/cekkelembaban'); ?>");
-        			$("#cek_kipas").load("<?php echo site_url('user/C_beranda/cekkipas'); ?>");
-        			$("#cek_lampu").load("<?php echo site_url('user/C_beranda/ceklampu'); ?>");
-        			$("#cek_pelembab").load("<?php echo site_url('user/C_beranda/cekpelembab'); ?>");
-        			$("#bacasuhu").load("<?php echo site_url('user/C_beranda/bacasuhu'); ?>");
-        			$("#bacakelembaban").load("<?php echo site_url('user/C_beranda/bacakelembaban'); ?>");
-        		}, 5000);
-        	});
-
-        </script>
         <div class="content-wrapper">
         	<!-- Content Header (Page header) -->
         	<section class="content-header mb-1 pb-1">
@@ -37,7 +22,7 @@
         				<div class="card">
         					<div class="card-header bg-dark">
         						<h3 class="card-title">Tabel Riwayat Baca Sensor</h3>
-        						<a href="#" class="btn btn-danger float-right mr-4" data-target="#modalHapus"
+        						<a href="#" class="btn btn-danger float-right mr-4" data-target="#modalHapusSemua"
         							data-toggle="modal">Hapus Semua
         						</a>
         					</div>
@@ -62,11 +47,11 @@
 										?>
         								<tr>
         									<td class="text-center"><?= $no; ?></td>
-        									<td class="text-center" id="cek_suhu"><?= $rw->suhu; ?></td>
-        									<td class="text-center" id="cek_kelembaban"><?= $rw->kelembaban; ?></td>
-        									<td class="text-center" id="cek_kipas"><?= $rw->kipas; ?></td>
-        									<td class="text-center" id="cek_lampu"><?= $rw->lampu; ?></td>
-        									<td class="text-center" id="cek_pelembab"><?= $rw->pelembab; ?></td>
+        									<td class="text-center"><?= $rw->suhu; ?></td>
+        									<td class="text-center"><?= $rw->kelembaban; ?></td>
+        									<td class="text-center"><?= $rw->kipas; ?></td>
+        									<td class="text-center"><?= $rw->lampu; ?></td>
+        									<td class="text-center"><?= $rw->pelembab; ?></td>
         									<td class="text-center"><?= $rw->tanggal; ?></td>
         									<td class="text-center">
         										<button type="button" class="btn btn-outline-danger btn-sm"
@@ -99,10 +84,10 @@
         </div>
         <!-- modal hapus -->
         <?php foreach ($riwayat as $rw):
-	$id 			= $rw->id_riwayat;
-	$suhu 			= $rw->suhu;
-	$kelembaban 	= $rw->kelembaban;
-	?>
+			$id 			= $rw->id_riwayat;
+			$suhu 			= $rw->suhu;
+			$kelembaban 	= $rw->kelembaban;
+		?>
         <form action="<?php echo base_url() . 'admin/C_riwayat/hapus' ?>" method="post">
         	<div class="modal fade" id="modalHapus<?= $id; ?>" aria-hidden="true">
         		<div class="modal-dialog">
@@ -132,26 +117,27 @@
         <?php endforeach; ?>
         <!-- modal hapus end -->
 
-        <!-- modal hapus -->
-        <div class="modal fade" id="modalHapus" aria-hidden="true">
-        	<div class="modal-dialog">
-        		<div class="modal-content">
-        			<div class="modal-header">
-        				<h4 class="modal-title">Hapus Semua</h4>
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        					<span aria-hidden="true">&times;</span>
-        				</button>
-        			</div>
-        			<div class="modal-body justify-content-center">
-        				<div>
-        					<h5>Anda yakin untuk menghapus semua data ini?</h5>
+        <!-- modal hapus semua -->
+        <form action="<?php echo base_url() . 'admin/C_riwayat/clear' ?>" method="post">
+        	<div class="modal fade" id="modalHapusSemua" aria-hidden="true">
+        		<div class="modal-dialog">
+        			<div class="modal-content">
+        				<div class="modal-header">
+        					<h4 class="modal-title">Hapus Semua</h4>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        						<span aria-hidden="true">&times;</span>
+        					</button>
         				</div>
-        			</div>
-        			<div class="modal-footer">
-        				<button type="button" class="btn btn-outline-default" data-dismiss="modal">Batal</button>
-        				<a href="<?=base_url('admin/C_hasil/clear')?>" class="btn btn-danger">Hapus</a>
+        				<div class="modal-body justify-content-center">
+        					<div>
+        						<h5>Anda yakin untuk menghapus semua data ini?</h5>
+        					</div>
+        				</div>
+        				<div class="modal-footer">
+        					<button type="button" class="btn btn-outline-default" data-dismiss="modal">Batal</button>
+        					<a href="<?=base_url('admin/C_riwayat/clear')?>" class="btn btn-danger">Hapus</a>
+        				</div>
         			</div>
         		</div>
         	</div>
-        </div>
-        <!-- modal hapus end -->
+        	<!-- modal hapus end -->

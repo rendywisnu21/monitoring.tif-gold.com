@@ -39,8 +39,8 @@ class C_riwayat extends CI_Controller
 	public function clear()
     {
 		$riwayat = $this->riwayat->getRiwayat()->result();
-		foreach ($riwayat as $h){
-			$id_riwayat = $h->id_riwayat;
+		foreach ($riwayat as $rw){
+			$id_riwayat = $rw->id_riwayat;
 			$where = array(
 				'id_riwayat' => $id_riwayat
 			);

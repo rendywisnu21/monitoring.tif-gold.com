@@ -79,7 +79,7 @@ class C_admin extends CI_Controller
 				'nama_admin' => $nama,
 				'username_admin' => $username,
 				'password_admin' => md5($password),
-                'role' => '0'
+                'role' => '1'
 			);
 		
 			$this->admin->tambah($data);
@@ -126,7 +126,6 @@ class C_admin extends CI_Controller
 				'nama_admin' => $nama,
 				'username_admin' => $username,
 				'password_admin' => $pass
-                // 'role' => '0'
 			);
 		
 			$this->db->where('id_admin', $id_edit);
