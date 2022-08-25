@@ -27,17 +27,17 @@ class C_admin extends CI_Controller
 	
 	public function tambah_aksi()
 	{
-		$this->form_validation->set_rules('nama', 'Nama', 'required|min_length[2]', [
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[2]', [
 			'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 5 karakter',
+            'min_length' => 'Isi minimal 2 huruf',
 			]);
-        $this->form_validation->set_rules('username', 'Username', 'required|min_length[2]', [
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[2]', [
             'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 5 karakter',
+            'min_length' => 'Isi minimal 2 huruf',
             ]);
-        $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]', [
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]', [
             'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 8 karakter',
+            'min_length' => 'Isi minimal 8 huruf',
             ]);
 
 		if($this->form_validation->run() == false){
@@ -90,17 +90,17 @@ class C_admin extends CI_Controller
 
     public function edit_aksi()
 	{
-		$this->form_validation->set_rules('nama', 'Nama', 'min_length[2]', [
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[2]', [
 			'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 5 karakter',
+            'min_length' => 'Isi minimal 2 huruf',
 			]);
-        $this->form_validation->set_rules('username', 'Username', 'min_length[2]', [
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[2]', [
             'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 5 karakter',
+            'min_length' => 'Isi minimal 2 huruf',
             ]);
-        $this->form_validation->set_rules('password', 'Password', 'min_length[8]', [
+        $this->form_validation->set_rules('password', 'Password', 'trim|min_length[8]', [
             // 'required' => 'Kolom ini harus di isi',
-            'minlength' => 'isian minimal 8 karakter',
+            'min_length' => 'Isi minimal 8 huruf',
             ]);
 
 		if($this->form_validation->run() == false){

@@ -89,20 +89,17 @@
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="nama">Nama Admin</label>
-						<input type="text" class="form-control" id="nama" name="nama" placeholder="Isi dengan nama"
-							minlength="2">
+						<input type="text" class="form-control" id="nama" name="nama" placeholder="Isi dengan nama">
 						<?= form_error('nama', '<small class="text-danger">', '</small>'); ?>
 					</div>
 					<div class="form-group">
 						<label for="username">Username</label>
-						<input type="text" class="form-control" id="username" name="username" placeholder="Isi dengan nama pengguna"
-							minlength="2">
+						<input type="text" class="form-control" id="username" name="username" placeholder="Isi dengan nama pengguna">
 						<?= form_error('username', '<small class="text-danger">', '</small>'); ?>
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="Isi password minimal 8 huruf"
-							minlength="8">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Isi password minimal 8 huruf">
 						<?= form_error('password', '<small class="text-danger">', '</small>'); ?>
 					</div>
 				</div>
@@ -136,19 +133,19 @@
 					<div class="form-group">
 						<label for="nama">Nama Admin</label>
 						<input type="text" class="form-control" id="nama" name="nama" value="<?= $nama ?>"
-							placeholder="Isi dengan nama" minlength="2">
+							placeholder="Isi dengan nama">
 						<?= form_error('nama', '<small class="text-danger">', '</small>'); ?>
 					</div>
 					<div class="form-group">
 						<label for="username">Username</label>
 						<input type="text" class="form-control" id="username" name="username" value="<?= $user ?>"
-							placeholder="Isi dengan nama pengguna" minlength="2">
+							placeholder="Isi dengan nama pengguna">
 						<?= form_error('username', '<small class="text-danger">', '</small>'); ?>
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" class="form-control" id="password" name="password"
-							placeholder="Isi password minimal 8 huruf" minlength="8">
+							placeholder="Isi password minimal 8 huruf">
 						<?= form_error('password', '<small class="text-danger">', '</small>'); ?>
 					</div>
 				</div>
